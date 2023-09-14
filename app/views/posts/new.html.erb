@@ -1,0 +1,46 @@
+<div id="wrapper">
+
+    <header id="header">
+        <h1>New Post</h1>
+    </header>
+
+    <div id="main">
+        <section id="content" class="main">
+            <%= form_for @post do |f| %>
+            <div class="field">
+                <%= f.label :title %>
+                <%= f.text_field :title %>
+            </div>
+
+            <div class="field">
+                <%= f.label :content %>
+                <%= f.cktext_area :content %>
+            </div>
+
+            <%= f.submit "Create Post" %>
+            <% end %>
+
+            <%= link_to "Back to Posts", posts_path %>
+        </section>
+    </div>
+    <footer id="footer">
+        <section>
+            <h2>compAirbnb</h2>
+            <dl class="alt">
+                <dt>Address</dt>
+                <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+                <dt>Phone</dt>
+                <dd>(000) 000-0000 x 0000</dd>
+                <dt>Email</dt>
+                <dd><a href="#">information@compairbnb.com</a></dd>
+            </dl>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+            </ul>
+        </section>
+        <p class="copyright">&copy; compAirbnb</p>
+    </footer>           
+</div>
